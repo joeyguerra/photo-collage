@@ -1,10 +1,10 @@
 {
   "name": "photo-collage",
   "version": "1.1.0",
-  "description": "Turns an array of images into a photo collage",
+  "description": "Turns an array of images into a photo collage.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js --timeout 10000 --watch"
+    "test": "echo 'Make sure to save the pngs on your machine first to compare them. Otherwise, the tests fail' & mocha test.js --timeout 10000"
   },
   "repository": {
     "type": "git",
