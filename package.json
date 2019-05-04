@@ -4,7 +4,7 @@
   "description": "Turns an array of images into a photo collage",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js --timeout 10000"
+    "test": "mocha test.js --timeout 10000 --watch"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/classdojo/photo-collage#readme",
   "dependencies": {
     "bluebird": "^3.3.5",
-    "canvas": "^2.4.1",
+    "canvas": "^2.5.0",
     "request": "^2.72.0"
   },
   "devDependencies": {

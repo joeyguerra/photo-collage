@@ -29,8 +29,13 @@ it("2x3 collage with no spacing matches reference", () => {
   };
 
   return createCollage(options)
-    .then((canvas) => canvas.toBuffer())
-    .then((buffer) => bufferEqual(buffer, fs.readFileSync("./img/result_no_spacing.png")))
+    .then((canvas) => {
+      return canvas.toBuffer()
+    })
+    .then((buffer) => {
+      const expected = fs.readFileSync("./img/result_no_spacing.png")
+      return bufferEqual(buffer, expected)
+    })
     .should.eventually.equal(true);
 });
 
@@ -46,7 +51,12 @@ it("2x3 collage with spacing matches reference", () => {
   };
 
   return createCollage(options)
-    .then((canvas) => canvas.toBuffer())
-    .then((buffer) => bufferEqual(buffer, fs.readFileSync("./img/result_with_spacing.png")))
+    .then((canvas) => {
+      return canvas.toBuffer()
+    })
+    .then((buffer) => {
+      fs.writeFileSync("./test.png", buffer)
+      return bufferEqual(buffer, fs.readFileSync("./img/result_with_spacing.png"))
+    })
     .should.eventually.equal(true);
 });
