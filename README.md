@@ -15,7 +15,11 @@ Combines several images into a photo collage.
 ![Result](https://github.com/classdojo/photo-collage/blob/master/img/result_no_spacing.png?raw=true)
 
 ## Installation
-`npm install --save photo-collage`  
+`npm install --save photo-collage`
+
+If you install the required libraries on a Mac via Homebrew, you might have to specify the `libffi` `pkgconfig` path.
+
+`PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig/" npm i`
 
 
 This library depends on `node-canvas`, which may require additional setup. See [their installation page](https://github.com/Automattic/node-canvas/wiki/_pages) for details.
