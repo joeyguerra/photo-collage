@@ -4,7 +4,7 @@
   "description": "Turns an array of images into a photo collage.",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Make sure to save the pngs on your machine first to compare them. Otherwise, the tests fail' & mocha test.js --timeout 10000",
+    "test": "echo 'Make sure to save the pngs on your machine first to compare them. Otherwise, the tests fail' & tap examples/**/*.js",
     "test:one": "nodemon tap"
   },
   "repository": {

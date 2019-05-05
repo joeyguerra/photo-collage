@@ -59,7 +59,7 @@ const options = {
 createCollage(options)
   .then((canvas) => {
     const src = canvas.jpegStream();
-    const dest = fs.createWriteStream("myFile");
+    const dest = fs.createWriteStream("myFile.png");
     src.pipe(dest);
   });
 ```
